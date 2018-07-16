@@ -1,0 +1,13 @@
+version: "3"
+services:
+  simplescan:
+    container_name: simplescan
+    restart: unless-stopped
+    volumes:
+      - $HOME:/config/images
+    environment:
+      USER_ID: 1000
+      GROUP_ID: 1000
+      TZ: 'Europe/Stockholm'
+    image: simplescan:latest
+
